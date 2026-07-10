@@ -1,0 +1,173 @@
+@charset "utf-8";
+#Menubar {
+	background-color:rgba(0,0,0,0.8);
+	backdrop-filter:blur(1px);
+	padding:15px;
+	text-align:center;
+	position:fixed;
+	width:100%;
+	box-shadow: 0px 5px 10px 0px rgba(255,204,51,0.66);
+	
+}
+
+#Menubar a{
+	text-decoration:none;
+	color:#FC0;
+	padding:15px;
+	font-size:18px;
+	border-radius:5px;
+	background-color:rgba(255,255,0,0.1);
+	transition:all 0.5s ease;
+}
+
+#Menubar p a:hover{
+	font-family:Verdana, Geneva, sans-serif;
+	background-color:#FC0;
+	color:#333;
+	transition:all 0.5s ease;
+}
+
+.Contentarea{
+	color:#FC0;
+	padding:100px 25% 100px 25%;
+	line-height:2.5;
+	background-color:#333;
+}
+
+.profile-pic {
+    width: 500px;          
+    height: 500px;
+    border-radius: 50%;  
+    object-fit: cover;     
+    display: block;        
+    margin: 20px auto;     
+    border: 4px solid #FC0; 
+}
+
+body{
+	background-color:#333;
+	margin:0;
+	background-color:#000;
+	font-family:Verdana, Geneva, sans-serif;
+}
+
+.Contentarea a {
+	border:2px solid #FC0;
+	padding:20px;
+	text-decoration:none;
+	color:#FC0;
+	border-radius:5px;
+}
+
+.Contentarea a:hover{
+	background-color:#FC0;
+	color:#000;
+}
+
+#Welcome{
+	font-size:36px;
+}
+
+#Logo{
+	font-size:24px;
+}
+ 
+#Photo{
+	font-size:24px;
+}
+
+#website{
+	font-size:24px;
+}
+
+#CV{
+	background-color:#333;
+	color:#FC0;
+	font-size:24px;
+}
+
+#Welcome h2 {
+	line-height:0.66;
+}
+
+#Welcome CV Logo
+Photo website h1 {
+	font-size:55px;
+	letter-spacing:7px;
+	line-height:0.66;
+}
+
+
+    body {
+		line-height: 1.6;
+		font-size:24px;
+    }
+#CV h1 {
+        font-size: 42px;
+        margin-bottom: 5px;
+    }
+#CV h2 {
+        margin-top: 3px;
+        border-bottom: 2px solid #FC0;
+        padding-bottom: 5px;
+    }
+    .contact {
+        margin-bottom: 20px;
+    }
+    .contact p {
+        margin: 3px 0;
+    }
+    ul {
+        margin-top: 5px;
+    }
+    .job-title {
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    .job-header {
+        font-weight: bold;
+        margin-top: 15px;
+		border-bottom:2px solid #FC0;
+		display:inline-block;
+    }
+
+.edu-split {
+    display: flex;
+    gap: 20px;
+}
+
+.edu-left {
+	width:50%;
+    padding-right: 20px;
+    border-right: 3px solid #FC0;
+}
+
+.edu-right {
+	width:50%;
+    padding-left: 20px;
+}
+
+
+#Photo {
+	background-color:#FC0;
+	color:#333;
+}
+
+#Photo a {
+	color:#000;
+	border:2px solid #000;
+}
+
+#Photo a:hover{
+	background-color:#000;
+	color:#FC0;
+} 
+
+ul.skill-list{
+	display:flex;
+	margin-bottom:25px;
+	flex-wrap:wrap;
+	column-gap:40px;
+	row-gap:10px;
+	padding-left:20px;
+}
