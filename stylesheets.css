@@ -11,7 +11,9 @@
 	box-sizing: border-box;
 	display: flex;
 	align-items: center;
+	z-index: 10000; 
 }
+
 
 #Menubar a.logo {
 	padding: 0;
@@ -100,15 +102,7 @@ body{
 	font-size:36px;
 }
 
-#Logo{
-	font-size:24px;
-}
- 
-#Photo{
-	font-size:24px;
-}
-
-#website{
+#Logo, #Photo, #website{
 	font-size:24px;
 }
 
@@ -122,8 +116,7 @@ body{
 	line-height:0.66;
 }
 
-#Welcome CV Logo
-Photo website h1 {
+#Welcome, #CV, #Logo, #Photo, #website, h1 {
 	font-size:55px;
 	letter-spacing:7px;
 	line-height:0.66;
