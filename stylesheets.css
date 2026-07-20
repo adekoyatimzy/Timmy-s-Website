@@ -57,6 +57,12 @@
 	transition: width 0.3s ease;
 }
 
+.menulinks-wrapper {
+	display: flex;
+	gap: 5px;
+	margin: 0 auto;
+	align-items:center;
+}
 
 .Contentarea{
 	color:#FC0;
