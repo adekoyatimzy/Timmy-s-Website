@@ -37,6 +37,21 @@
     height: auto;
 }
 
+#Menubar a.logo:hover {
+	opacity: 0.8;
+}
+
+#Menubar a:not(.logo)::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -3px;
+	width: 0%;
+	height: 1.5px;
+	background: #FFF;
+	transition: width 0.3s ease;
+}
+
 .Contentarea{
 	color:#FC0;
 	padding:100px 25% 100px 25%;
