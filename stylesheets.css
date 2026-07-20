@@ -27,11 +27,11 @@
 	transition:all 0.5s ease;
 }
 
-#menubar a.logo{
+#Menubar a.logo{
 	margin-right:auto;
 }
 
-#menubar a.logo img {
+#Menubar a.logo img {
     width: 75px !important;
     height: auto;
 }
