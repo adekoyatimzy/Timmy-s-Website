@@ -46,24 +46,13 @@
 
 .menulinks-wrapper a:hover {
 	font-family: Verdana, Geneva, sans-serif;
-	background-color: #FC0;
-	color: #333;
-	transition: all 0.5s ease;
+	background-color: #FFCC00; 
+	color: #333333;  
+	opacity: 1;
 }
 
 #Menubar a.logo:hover {
 	opacity: 0.8;
-}
-
-#Menubar a:not(.logo)::after {
-	content: "";
-	position: absolute;
-	left: 0;
-	bottom: -3px;
-	width: 0%;
-	height: 1.5px;
-	background: #FFF;
-	transition: width 0.3s ease;
 }
 
 #Menubar a:not(.logo):hover::after {
