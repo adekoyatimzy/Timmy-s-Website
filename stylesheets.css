@@ -32,7 +32,7 @@
 }
 
 #menubar a.logo img {
-    width: 75px;
+    width: 75px !important;
     height: auto;
 }
 
