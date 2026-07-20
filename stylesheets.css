@@ -31,6 +31,11 @@
 	margin-right:auto;
 }
 
+#menubar a.logo img {
+    width: 75px;
+    height: auto;
+}
+
 .Contentarea{
 	color:#FC0;
 	padding:100px 25% 100px 25%;
