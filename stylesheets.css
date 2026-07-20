@@ -27,9 +27,14 @@
 	transition:all 0.5s ease;
 }
 
-#Menubar a.logo{
-	margin-right:auto;
-	margin-left:0;
+#Menubar a.logo {
+    float: left;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none !important;
+    padding: 0;
 }
 
 #Menubar a.logo img {
