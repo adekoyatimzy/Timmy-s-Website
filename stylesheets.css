@@ -11,14 +11,12 @@
 	box-sizing: border-box;
 	display: flex;
 	align-items: center;
-	justify-content: center; 
 }
 
 #Menubar a.logo {
-	position: absolute;
-	left: 15px; 
 	padding: 0;
 	background: none !important;
+	display: block;
 }
 
 #Menubar a.logo img {
@@ -31,6 +29,8 @@
 	display: flex;
 	gap: 5px;
 	align-items: center;
+	margin: 0 auto; 
+	padding-right: 75px; 
 }
 
 #Menubar a {
@@ -64,6 +64,10 @@
 	height: 1.5px;
 	background: #FFF;
 	transition: width 0.3s ease;
+}
+
+#Menubar a:not(.logo):hover::after {
+	width: 100%;
 }
 
 .Contentarea{
