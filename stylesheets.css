@@ -61,6 +61,9 @@
 	width: 100%;
 }
 
+#paragraph{
+	text-align:center;
+}
 .Contentarea{
 	color:#FC0;
 	padding:100px 25% 100px 25%;
