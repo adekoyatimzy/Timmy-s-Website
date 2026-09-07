@@ -105,5 +105,144 @@ body,td,th {
 
 </div>
 
+<script>
+// 1. Find all gallery items on the page
+var items = document.querySelectorAll('.gallery-item');
+var currentIndex = 0;
+
+items.forEach(function(item, index) {
+    item.addEventListener('click', function() {
+        currentIndex = index; // Track which image was clicked
+        openLightbox();
+    });
+});
+
+function openLightbox() {
+    // Get the initial image source path
+    var imgSrc = items[currentIndex].querySelector('img').src;
+    
+    // Create the main dark background wrapper
+    var lightbox = document.createElement('div');
+    lightbox.style.position = 'fixed';
+    lightbox.style.inset = '0';
+    lightbox.style.background = 'rgba(10, 10, 15, 0.95)';
+    lightbox.style.display = 'flex';
+    lightbox.style.flexDirection = 'column';
+    lightbox.style.alignItems = 'center';
+    lightbox.style.justifyContent = 'center';
+    lightbox.style.zIndex = '10000';
+    
+    // Create the central image element
+    var img = document.createElement('img');
+    img.src = imgSrc;
+    img.style.maxWidth = '75vw';
+    img.style.maxHeight = '70vh';
+    img.style.objectFit = 'contain';
+    img.style.borderRadius = '4px';
+    img.style.boxShadow = '0 10px 40px rgba(0,0,0,0.6)';
+    img.style.transition = 'opacity 0.2s ease';
+    
+    // Helper function to update the content dynamically
+    function updateGallery() {
+        img.style.opacity = '0';
+        setTimeout(function() {
+            img.src = items[currentIndex].querySelector('img').src;
+            counter.innerHTML = (currentIndex + 1) + ' / ' + items.length;
+            img.style.opacity = '1';
+        }, 150);
+    }
+    
+    // Create the Close Button (Top Right)
+    var closeBtn = document.createElement('div');
+    closeBtn.innerHTML = '&#10006;';
+    closeBtn.style.position = 'absolute';
+    closeBtn.style.top = '30px';
+    closeBtn.style.right = '40px';
+    closeBtn.style.color = 'rgba(255,255,255,0.7)';
+    closeBtn.style.fontSize = '24px';
+    closeBtn.style.cursor = 'pointer';
+    closeBtn.style.transition = 'color 0.2s';
+    closeBtn.onmouseenter = function() { this.style.color = '#fff'; };
+    closeBtn.onmouseleave = function() { this.style.color = 'rgba(255,255,255,0.7)'; };
+    closeBtn.onclick = function() { lightbox.remove(); };
+    
+    // Create the Left Nav Button (Circled Arrow)
+    var leftArrow = document.createElement('div');
+    leftArrow.innerHTML = '&#10094;';
+    leftArrow.style.position = 'absolute';
+    leftArrow.style.left = '40px';
+    leftArrow.style.width = '50px';
+    leftArrow.style.height = '50px';
+    leftArrow.style.background = 'rgba(255,255,255,0.08)';
+    leftArrow.style.color = '#fff';
+    leftArrow.style.borderRadius = '50%';
+    leftArrow.style.display = 'flex';
+    leftArrow.style.alignItems = 'center';
+    leftArrow.style.justifyContent = 'center';
+    leftArrow.style.fontSize = '20px';
+    leftArrow.style.cursor = 'pointer';
+    leftArrow.style.transition = 'background 0.2s';
+    leftArrow.onmouseenter = function() { this.style.background = 'rgba(255,255,255,0.2)'; };
+    leftArrow.onmouseleave = function() { this.style.background = 'rgba(255,255,255,0.08)'; };
+    leftArrow.onclick = function(e) {
+        e.stopPropagation();
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+        updateGallery();
+    };
+    
+    // Create the Right Nav Button (Circled Arrow)
+    var rightArrow = document.createElement('div');
+    rightArrow.innerHTML = '&#10095;';
+    rightArrow.style.position = 'absolute';
+    rightArrow.style.right = '40px';
+    rightArrow.style.width = '50px';
+    rightArrow.style.height = '50px';
+    rightArrow.style.background = 'rgba(255,255,255,0.08)';
+    rightArrow.style.color = '#fff';
+    rightArrow.style.borderRadius = '50%';
+    rightArrow.style.display = 'flex';
+    rightArrow.style.alignItems = 'center';
+    rightArrow.style.justifyContent = 'center';
+    rightArrow.style.fontSize = '20px';
+    rightArrow.style.cursor = 'pointer';
+    rightArrow.style.transition = 'background 0.2s';
+    rightArrow.onmouseenter = function() { this.style.background = 'rgba(255,255,255,0.2)'; };
+    rightArrow.onmouseleave = function() { this.style.background = 'rgba(255,255,255,0.08)'; };
+    rightArrow.onclick = function(e) {
+        e.stopPropagation();
+        currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+        updateGallery();
+    };
+    
+    // Create the Live Counter Bubble (Bottom Center)
+    var counter = document.createElement('div');
+    counter.innerHTML = (currentIndex + 1) + ' / ' + items.length;
+    counter.style.position = 'absolute';
+    counter.style.bottom = '40px';
+    counter.style.background = 'rgba(255,255,255,0.1)';
+    counter.style.color = '#fff';
+    counter.style.padding = '6px 16px';
+    counter.style.borderRadius = '20px';
+    counter.style.fontSize = '14px';
+    counter.style.fontFamily = 'sans-serif';
+    counter.style.letterSpacing = '1px';
+    
+    // Assemble all layout nodes together
+    lightbox.appendChild(img);
+    lightbox.appendChild(closeBtn);
+    lightbox.appendChild(leftArrow);
+    lightbox.appendChild(rightArrow);
+    lightbox.appendChild(counter);
+    document.body.appendChild(lightbox);
+    
+    // Close window cleanly if user clicks empty backdrop workspace
+    lightbox.onclick = function(e) {
+        if (e.target === lightbox) {
+            lightbox.remove();
+        }
+    };
+}
+</script>
+	
 </body>
 </html>
