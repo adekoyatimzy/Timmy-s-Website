@@ -100,11 +100,13 @@ body{
 
 .Contentarea a:hover{
 	background-color:#FC0;
-	color:#000;
+	color:#333333;
 }
 
 #Welcome{
 	font-size:24px;
+	background-color:#333333;
+	min-height: 100vh;
 }
 
 #Logo, #Photo, #website{
