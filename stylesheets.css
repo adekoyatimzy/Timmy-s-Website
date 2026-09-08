@@ -309,3 +309,103 @@ ul.skill-list{
 .gallery-item:hover .gallery-overlay {
 	opacity: 1;
 }
+
+#Welcome.Contentarea {
+    padding: 10vh 8vw 4vh 8vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between; 
+    overflow: hidden; 
+    box-sizing: border-box;
+    background-color: #333333;
+}
+
+.welcome-text-block {
+    display: flex;
+    flex-direction: column;
+    text-align: left; 
+    max-width: 48vw; 
+}
+
+#Welcome h1 {
+    font-size: 5.5vh;
+    color: #FC0;
+    margin: 0 0 1.5vh 0;
+    line-height: 1.1;
+    letter-spacing: 0.4vw;
+}
+
+#Welcome h2 {
+    font-size: 3vh;
+    color: #FC0;
+    margin: 0 0 3vh 0;
+    line-height: 1.2;
+}
+
+#Welcome #paragraph p {
+    text-align: left;
+    font-size: 2.1vh;
+    line-height: 1.6;
+    color: #FC0;
+    margin: 0;
+}
+
+#Welcome .profile-pic {
+    width: 44vh;          
+    height: 44vh;
+    border-radius: 50%;  
+    object-fit: cover;     
+    display: block;        
+    margin: 0; 
+    border: 0.6vh solid #FC0; 
+    flex-shrink: 0; 
+    box-shadow: 0 2vh 4vh rgba(0,0,0,0.4);
+}
+
+@media screen and (max-width: 992px) { 
+    
+    #Welcome.Contentarea {
+        flex-direction: column-reverse; 
+        justify-content: center;
+        align-items: center;
+        gap: 4vh; 
+        padding: 12vh 6vw 4vh 6vw; 
+        height: auto; 
+        min-height: 100vh;
+        overflow: visible; 
+    }
+
+    .welcome-text-block {
+        max-width: 100%; 
+        text-align: center;
+    }
+
+    #Welcome h1 {
+        font-size: 4.5vh;
+        text-align: center;
+        margin-bottom: 1vh;
+        letter-spacing: 0.2vw;
+    }
+
+    #Welcome h2 {
+        font-size: 2.6vh;
+        text-align: center;
+        margin-bottom: 2vh;
+    }
+
+    #Welcome #paragraph p {
+        text-align: center; 
+        font-size: 2.2vh;
+        line-height: 1.5;
+    }
+
+    #Welcome .profile-pic {
+        width: 30vh;  
+        height: 30vh; 
+        margin: 0 auto; 
+        border: 0.5vh solid #FC0;
+        box-shadow: 0 1.5vh 3vh rgba(0,0,0,0.4);
+    }
+}
