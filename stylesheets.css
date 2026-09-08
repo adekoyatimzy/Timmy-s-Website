@@ -108,7 +108,7 @@ body{
 	min-height: 100vh;
 }
 
-#Logo, #Photo, #website{
+#Logo, #Photo, #website, ProductdesignProject{
 	font-size: 24px;
 	min-height: 17.5vh;
 }
@@ -124,7 +124,7 @@ body{
 }
 
 #Welcome CV Logo
-Photo website h1 {
+Photo website ProductdesignProject h1 {
 	font-size:55px;
 	letter-spacing:7px;
 	line-height:0.66;
